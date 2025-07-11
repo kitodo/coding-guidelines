@@ -3,7 +3,10 @@
 > [!NOTE]
 > Dieses Dokument ist gemäß § 11 der [Vereinssatzung](https://www.kitodo.org/fileadmin/groups/kitodo/Verein/2025-06-20_Satzung_Kitodo_eV.pdf) auf Beschluss der Mitgliederversammlung des Vereins [Kitodo. Key to digital objects e. V.](https://www.kitodo.org/verein/ueber-den-verein) am 25.06.2025 in Kraft getreten und ersetzt mit diesem Stichtag die bisher gültige, von der Mitgliederversammlung beschlossene Fassung vom 24.11.2021.
 
-Dieses Dokument beschreibt die Grundsätze der gemeinsamen Software-Entwicklung für Kitodo. Dazu werden die generelle Entwicklungsmethodik, verbindliche Standards wie zum Beispiel Coding Guidelines sowie die zu verwendenden Werkzeuge und Kommunikationsmittel vorgestellt. Der Leitfaden richtet sich sowohl an individuelle Software-Entwickler:innen, die am Kitodo-Quellcode arbeiten möchten, als auch an Entscheider:innen, die Entwicklungsaufträge erteilen möchten und dabei die Kompatibilität der beauftragten Arbeiten zum quelloffenen Community-Produkt Kitodo gewährleisten wollen. Die Einhaltung der hier beschriebenen Regularien ist zwingende Voraussetzung für jede Teilhabe an der Kitodo-Entwicklung.[^1]
+Dieses Dokument beschreibt die Grundsätze der gemeinsamen Software-Entwicklung für Kitodo. Dazu werden die generelle Entwicklungsmethodik, verbindliche Standards wie zum Beispiel Coding Guidelines sowie die zu verwendenden Werkzeuge und Kommunikationsmittel vorgestellt. Der Leitfaden richtet sich sowohl an individuelle Software-Entwickler:innen, die am Kitodo-Quellcode arbeiten möchten, als auch an Entscheider:innen, die Entwicklungsaufträge erteilen möchten und dabei die Kompatibilität der beauftragten Arbeiten zum quelloffenen Community-Produkt Kitodo gewährleisten wollen. Die Einhaltung der hier beschriebenen Regularien ist zwingende Voraussetzung für jede Teilhabe an der Kitodo-Entwicklung.
+
+> [!IMPORTANT]
+> Gemäß § 3.5 der Satzung haben sich Mitglieder des Vereins *Kitodo. Key to digital objects e. V.* insbesondere zur Einhaltung der in diesem Dokument beschriebenen Regeln verpflichtet. Dies gilt auch bei der Vergabe von Entwicklungsaufträgen an Dritte.
 
 Die Festlegungen gelten für alle im Umfeld von Kitodo gemeinschaftlich entwickelten Komponenten ([Kitodo.Production](https://github.com/kitodo/kitodo-production), [Kitodo.Presentation](https://github.com/kitodo/kitodo-presentation), etc.) soweit sie für das jeweilige Produkt anwendbar sind. Nicht aus der gemeinschaftlichen Entwicklung hervorgegangener Quellcode, der zu einem Kitodo-Produkt beigesteuert wird, muss mindestens die beschriebenen Standards und Bedingungen zur Übernahme von Quellcode erfüllen.
 
@@ -23,7 +26,10 @@ Nach Abschluss der Programmierung und erfolgreichem Test der Änderungen wird de
 
 Treten nach erfolgter Übernahme in den Hauptentwicklungszweig trotz Qualitätssicherung, Tests und Code-Revision Fehler auf, die eindeutig auf einen Pull Request zurückgeführt werden können, so müssen diese durch die für den Pull Request verantwortlichen Entwickler:innen binnen kurzer Frist behoben werden. Andernfalls kann das Release Management abhängig von der Signifikanz der Fehler zur Sicherstellung der Stabilität und Sicherheit von Kitodo den Pull Request rückabwickeln. Den Entwickler:innen steht es frei, den Pull Request erneut einzureichen.
 
-Über den Zeitpunkt der Freigabe zur Quellcode-Übernahme entscheiden generell die Entwickler:innen, so dass zum Beispiel kommerzielle Entwicklungen durchaus eine gewisse Zeit zurückgehalten werden können. Da mit zunehmendem zeitlichem Abstand die Quellcode-Übernahme aufwändiger wird, sollte eine Freigabe jedoch spätestens 3 Monate nach Fertigstellung der Entwicklung erfolgen.[^2] **Eine Ausnahme stellen reine Fehlerbehebungen dar, die stets sofort nach Fertigstellung freigegeben werden müssen, sofern sie einen Fehler in einem öffentlichen Entwicklungszweig betreffen!**
+Über den Zeitpunkt der Freigabe zur Quellcode-Übernahme entscheiden generell die Entwickler:innen, so dass zum Beispiel kommerzielle Entwicklungen durchaus eine gewisse Zeit zurückgehalten werden können. Da mit zunehmendem zeitlichem Abstand die Quellcode-Übernahme aufwändiger wird, sollte eine Freigabe jedoch spätestens 3 Monate nach Fertigstellung der Entwicklung erfolgen. **Eine Ausnahme stellen reine Fehlerbehebungen dar, die stets sofort nach Fertigstellung freigegeben werden müssen, sofern sie einen Fehler in einem öffentlichen Entwicklungszweig betreffen!**
+
+> [!IMPORTANT]
+> Siehe auch § 3.5 der Vereinssatzung, wonach diese Frist insbesondere für Vereinsmitglieder gilt.
 
 ## Maßnahmen zur Qualitätssicherung
 
@@ -109,7 +115,3 @@ Einem funktionalen Release kann ein *Release Candidate* vorausgehen. Dabei hande
 **Sämtliche Entwicklungsvorhaben sollten öffentlich dokumentiert und müssen dem zuständigen Release Management mitgeteilt werden.** Das Release Management behandelt diese Mitteilungen auf Wunsch vertraulich. Dies dient der Vermeidung von Parallelentwicklungen und somit einer stärkeren Bündelung von Entwicklungsressourcen der Community sowie einer verlässlichen Release-Planung.
 
 **Da für die Revision von Code-Freigaben und die Übernahme in den Hauptentwicklungszweig Ressourcen des Release Managements benötigt werden, diese aber in der Regel zeitnah erfolgen müssen, sollte der Entwicklungsplan größerer Vorhaben frühzeitig mit dem Release Management abgestimmt werden.** Nur dann kann das Release Management entsprechende Ressourcen zur jeweils benötigten Zeit widmen und dadurch zu einem verzögerungsfreien Projektverlauf beitragen.
-
-[^1] Gemäß § 3.5 der Satzung haben sich Mitglieder des Vereins *Kitodo. Key to digital objects e. V.* insbesondere zur Einhaltung der in diesem Dokument beschriebenen Regeln verpflichtet. Dies gilt auch bei der Vergabe von Entwicklungsaufträgen an Dritte.
-
-[^2] Siehe auch § 3.5 der Vereinssatzung, wonach diese Frist insbesondere für Vereinsmitglieder gilt.
