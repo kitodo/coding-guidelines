@@ -1,14 +1,14 @@
 # Leitfaden für Kitodo-Entwickler:innen
 
 > [!NOTE]
-> Dieses Dokument ist gemäß § 11 der [Vereinssatzung](https://www.kitodo.org/fileadmin/groups/kitodo/Verein/2025-06-20_Satzung_Kitodo_eV.pdf) auf Beschluss der Mitgliederversammlung des Vereins [Kitodo. Key to digital objects e. V.](https://www.kitodo.org/verein/ueber-den-verein) am 25.06.2025 in Kraft getreten und ersetzt mit diesem Stichtag die bisher gültige, von der Mitgliederversammlung beschlossene Fassung vom 24.11.2021.
+> Dieses Dokument ist gemäß § 11 der [Vereinssatzung](https://www.kitodo.org/fileadmin/groups/kitodo/Verein/2025-06-20_Satzung_Kitodo_eV.pdf) auf Beschluss der Mitgliederversammlung des Vereins [Kitodo. Key to digital objects e. V.](https://www.kitodo.org/verein/ueber-den-verein) am 25.06.2025 in Kraft getreten und ersetzt mit diesem Stichtag die bisher gültige, von der Mitgliederversammlung beschlossene Fassung vom 24.11.2021. Änderungen an diesem Dokument können in Form von [Pull Request](https://github.com/kitodo/coding-guidelines/pulls) vorgeschlagen sowie diskutiert werden und erfordern die Zustimmung der Mitgliederversammlung.
 
 Dieses Dokument beschreibt die Grundsätze der gemeinsamen Software-Entwicklung für Kitodo. Dazu werden die generelle Entwicklungsmethodik, verbindliche Standards wie zum Beispiel Coding Guidelines sowie die zu verwendenden Werkzeuge und Kommunikationsmittel vorgestellt. Der Leitfaden richtet sich sowohl an individuelle Software-Entwickler:innen, die am Kitodo-Quellcode arbeiten möchten, als auch an Entscheider:innen, die Entwicklungsaufträge erteilen möchten und dabei die Kompatibilität der beauftragten Arbeiten zum quelloffenen Community-Produkt Kitodo gewährleisten wollen. Die Einhaltung der hier beschriebenen Regularien ist zwingende Voraussetzung für jede Teilhabe an der Kitodo-Entwicklung.
 
+Die Festlegungen gelten für alle im Umfeld von Kitodo gemeinschaftlich entwickelten Komponenten ([Kitodo.Production](https://github.com/kitodo/kitodo-production), [Kitodo.Presentation](https://github.com/kitodo/kitodo-presentation), etc.) soweit sie für das jeweilige Produkt anwendbar sind. Nicht aus der gemeinschaftlichen Entwicklung hervorgegangener Quellcode, der zu einem Kitodo-Produkt beigesteuert wird, muss mindestens die beschriebenen Standards und Bedingungen zur Übernahme von Quellcode erfüllen.
+
 > [!IMPORTANT]
 > Gemäß § 3.5 der Satzung haben sich Mitglieder des Vereins *Kitodo. Key to digital objects e. V.* insbesondere zur Einhaltung der in diesem Dokument beschriebenen Regeln verpflichtet. Dies gilt auch bei der Vergabe von Entwicklungsaufträgen an Dritte.
-
-Die Festlegungen gelten für alle im Umfeld von Kitodo gemeinschaftlich entwickelten Komponenten ([Kitodo.Production](https://github.com/kitodo/kitodo-production), [Kitodo.Presentation](https://github.com/kitodo/kitodo-presentation), etc.) soweit sie für das jeweilige Produkt anwendbar sind. Nicht aus der gemeinschaftlichen Entwicklung hervorgegangener Quellcode, der zu einem Kitodo-Produkt beigesteuert wird, muss mindestens die beschriebenen Standards und Bedingungen zur Übernahme von Quellcode erfüllen.
 
 ## Werkzeuge und Kommunikation
 
@@ -65,7 +65,7 @@ Diese Vereinbarungen gelten unabhängig von der verwendeten Programmiersprache u
 
 ### Kitodo.Presentation
 
-Die Präsentationskomponente der Kitodo Digitalisierungssuite bildet eine Erweiterung (*Extension*) für das freie CMS [TYPO3](https://typo3.org/). Diese Extension enthält selbst alle wesentlichen Funktionsmodule einer modernen Digitalen Bibliothek, stellt zugleich aber auch eine umfangreiche API zur Entwicklung ergänzender Module (in Form eigener Extensions) bereit. **Für die Entwicklung sind die [Coding Guidelines des TYPO3-Projekts](https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/CodingGuidelines/Index.html) bindend.**
+Die Präsentationskomponente der Kitodo Digitalisierungssuite bildet eine Erweiterung (*Extension*) für das freie CMS [TYPO3](https://typo3.org/). Diese Extension enthält selbst alle wesentlichen Funktionsmodule einer modernen Digitalen Bibliothek, stellt zugleich aber auch eine umfangreiche API zur Entwicklung ergänzender Module (in Form eigener Extensions) bereit. Für die Entwicklung sind die [Coding Guidelines des TYPO3-Projekts](https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/CodingGuidelines/Index.html) bindend.
 
 Zusätzlich gelten folgende, eventuell abweichende Vereinbarungen:
 
@@ -78,11 +78,11 @@ Zusätzlich gelten folgende, eventuell abweichende Vereinbarungen:
   - `@property[-read|-write]` für Klassen
   - `@param` und `@return` für Methoden
   - `@var` für Klassenvariablen
-- Methoden müssen die Datentypen aller Parameter und des Rückgabewerts deklarieren. Mittels `declare(strict_types=1);` muss für jede PHP-Datei eine strikte Typisierung erzwungen werden.
+- Methoden müssen die Datentypen aller Parameter und des Rückgabewerts deklarieren, sofern die unterstützten PHP-Versionen dies zulassen. Mittels `declare(strict_types=1);` muss für jede PHP-Datei eine strikte Typisierung erzwungen werden.
 
 ### Kitodo.Production
 
-Die Produktionskomponente der Kitodo Digitalisierungssuite bildet eine Webapplikation für einen Applikationsserver wie Tomcat oder Jetty. Generell werden hier die [Coding Standards von Scott Ambler](https://www.ambysoft.com/downloads/javaCodingStandards.pdf) als bindend betrachtet.
+Die Produktionskomponente der Kitodo Digitalisierungssuite bildet eine Webapplikation für einen Applikationsserver wie [Tomcat](https://tomcat.apache.org/) oder [Jetty](https://jetty.org/). Generell werden hier die [Coding Standards von Scott Ambler](https://www.ambysoft.com/downloads/javaCodingStandards.pdf) als bindend betrachtet.
 
 Zusätzlich gelten folgende, eventuell abweichende Vereinbarungen:
 
