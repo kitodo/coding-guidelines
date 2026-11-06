@@ -98,6 +98,14 @@ Zusätzlich gelten folgende, eventuell abweichende Vereinbarungen:
 - Der Quellcode muss mit dem mitgelieferten Codeformatter formatiert sein.
 - Lesbarkeit und Wartbarkeit haben prinzipiell eine höhere Priorität als Kompaktheit. Verkettungen von Ausdrücken in einer Zeile oder Anweisung sollen vermieden werden, wenn sie die Lesbarkeit des Codes negativ beeinträchtigen.
 
+### Einsatz von KI-Agenten und LLM-gestützte Software-Entwicklung
+
+Beim Einsatz von künstlicher Intelligenz (KI) und/oder großen Sprachmodellen (LLM) im Rahmen der Software-Entwicklung für Kitodo sind die folgenden Regularien einzuhalten:
+
+- Die volle Verantwortung verbleibt bei den Entwickler:innen. Sie gelten uneingeschränkt als Autor:innen und haben alle damit einhergehenden Rechte und Pflichten wahrzunehmen. Dies gilt gleichermaßen für Änderungen am Quellcode und der Dokumentation wie auch für jegliche Kommunikation und Interaktion etwa auf GitHub.
+- Die Entwickler:innen sind verpflichtet, jeden maschinell erzeugten Beitrag persönlich nachzuverfolgen und zu verifizieren, bevor er ins Review gegeben oder veröffentlicht wird. Insbesondere haben die Entwickler:innen dafür Sorge zu tragen, dass auch KI-Agenten und LLMs die geltenden Lizenzen, Coding Guidelines und den Code of Conduct einhalten.
+- Die Verwendung von KI-Agenten und LLM-gestützten Werkzeugen muss stets offengelegt werden. Pull Requests und Commits müssen unter Angabe des verwendeten Modells, der Version und des Anbieters in der Form `Assisted-by: <Modell> <Version> (<Anbieter>)` gekennzeichnet werden (z. B. `Assisted-by: Claude Sonnet 5.5 (Anthropic)`). Auch bei Kommentaren an Issues und Pull Requests sowie Diskussionsbeiträgen muss ersichtlich sein, ob diese von einem KI-Agenten stammen.
+
 ## Versionierung und Releasezyklen
 
 Kitodo verwendet [Semantic Versioning](https://semver.org/), d. h. das stets dreiteilige Versionsschema unterscheidet zwischen reinen Fehlerbehebungen und nicht-funktionalen Änderungen (*Patch Version*), funktionalen Erweiterungen und Aktualisierungen von Abhängigkeiten (*Minor Version*) sowie tiefergreifenden Änderungen etwa der Architektur, des Datenmodells oder grundlegender Basiskomponenten (*Major Version*). Für jede Major Version wird auf GitHub ein eigener Code-Branch gepflegt, so dass mehrere Major Versionen parallel entwickelt und gepflegt werden können. Minor und Patch Versionen werden innerhalb dieser Branches mit Tags gekennzeichnet. In Ausnahmefällen können auch für Minor Versionen eigene Branches angelegt werden.
